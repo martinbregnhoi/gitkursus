@@ -6,20 +6,69 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Git Kursus</title>
     <style>
-        article{
-            display:grid;
-            grid-template-columns: repeat(3, 1fr);
+        body {
+            /*            align-items: center;*/
+            background: #cecece;
+            padding: 2em;
+        }
+
+        main {
+            display: grid;
+            grid-auto-flow: dense;
+            grid-gap: 2em;
+            grid-template-columns: 1fr;
+/*            grid-auto-rows: minmax(100px, auto);*/
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+
+        article {
+            min-height: 100px;
+            background: #fff;
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media screen and (min-width: 700px) {
+            main {
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+
+
+            .article-right {
+                grid-column: 2 / span 2;
+            }
+
+            .article-left {
+                grid-column: 1 / span 2;
+            }
         }
     </style>
 </head>
+
 <body>
     <h1>Hello Git</h1>
     <main>
-        <article>
-            <section>Her er en section med tekst</section>
-            <section>Dette er linie 2</section>
-            <section>Dette er linie 3</section>
-        </article>
+        <article>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br></article>
+        <article>2</article>
+        <article>3</article>
+        <article class="article-right">4</article>
+        <article>5</article>
+        <article>6</article>
+        <article class="article-left">7</article>
+        <article>8</article>
+        <article>9</article>
+        <article class="article-right">10</article>
+        <article>11</article>
+        <article>11</article>
     </main>
-</body>
-</html>
+</body></html>
